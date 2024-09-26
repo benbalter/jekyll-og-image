@@ -113,10 +113,10 @@ class JekyllOgImage::Generator < Jekyll::Generator
   def add_description(canvas, post, config)
     description = strip_html(markdownify(post.data["description"])).strip
     canvas.text(description,
-      width: (config.image ? 870 : 1040) * 0.8,
+      width: config.domain ? 850 : 1040,
       gravity: :sw,
       color: config.content.color,
-      dpi: 175,
+      dpi: 150,
       font: config.content.font_family
     ) { |_canvas, _text| { x: 80, y: config.margin_bottom } }
   end
