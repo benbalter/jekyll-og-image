@@ -83,7 +83,7 @@ class JekyllOgImage::Generator < Jekyll::Generator
     canvas.text(post.data["title"],
       width: config.image ? 870 : 1040,
       color: config.header.color,
-      dpi: 400,
+      dpi: 300,
       font: config.header.font_family
     ) { |_canvas, _text| { x: 80, y: 100 } }
   end
@@ -116,7 +116,7 @@ class JekyllOgImage::Generator < Jekyll::Generator
       width: config.domain ? 850 : 1040,
       gravity: :sw,
       color: config.content.color,
-      dpi: 150,
+      dpi: 200,
       font: config.content.font_family
     ) { |_canvas, _text| { x: 80, y: config.margin_bottom } }
   end
